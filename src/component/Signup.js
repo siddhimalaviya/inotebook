@@ -65,12 +65,12 @@ const Signup = (props) => {
         <div className='container'>
             <div className='row'>
 
-                <div className=" text-white col-6 my-5" >
+                <div className=" col-lg-6 col-md-6 col-sm-12 my-5 align-self-center" >
                     <div>
-                        <img src="https://st.depositphotos.com/18722762/51522/v/600/depositphotos_515228776-stock-illustration-online-registration-sign-login-account.jpg" alt="" style={{ width: "35rem" }} />
+                        <img src="https://st.depositphotos.com/18722762/51522/v/600/depositphotos_515228776-stock-illustration-online-registration-sign-login-account.jpg" alt="" className='w-100 rounded mx-auto d-block h-100' />
                     </div>
                 </div>
-                <div className=" mx-4 text-black col-6 my-5" style={{ width: "25rem" }}>
+                <div className="col-lg-6 col-md-6 col-sm-12 my-5">
                     <div className="card-body" style={{color: props.mode === 'dark'? 'white': 'black'}}>
                         <h2 className='text-center'>Create an account to use iNotebook</h2>
                         <form onSubmit={handleSubmit}>

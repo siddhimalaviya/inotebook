@@ -15,7 +15,7 @@ const Navbar = (props) => {
         <>
             <nav className={`navbar fixed-top navbar-expand-lg shadow  rounded navbar-${props.mode} bg-${props.mode}`}>
                 <div>
-                    
+
                 </div>
                 <div className="container-fluid">
                     <img src="./assest/image/download.jpg" alt="" style={{ width: "48px", height: "44px" }} />
@@ -31,16 +31,16 @@ const Navbar = (props) => {
                                 <Link className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} to="/about">About</Link>
                             </li>
                         </ul>
-                        {!localStorage.getItem('token') ? <form className="d-flex">
-                            <Link className={`btn ${props.mode=='dark' ? ' btn-outline-light':'btn-outline-primary'} mx-2`} to="/login" role="button">Login</Link>
-                            <Link className={`btn ${props.mode=='dark' ? ' btn-outline-light':'btn-outline-primary'}`}to="/signup" role="button">Sign up</Link>
-                        </form> : <button onClick={handleLogout} className={`btn ${props.mode=='dark' ? ' btn-outline-light':'btn-outline-primary'} mx-2`}>Logout</button>}
-                    </div>
+                        {!localStorage.getItem('token') ? <form className="d-flex mb-lg-0 mb-3">
+                            <Link className={`btn ${props.mode == 'dark' ? ' btn-outline-light' : 'btn-outline-primary'} `} to="/login" role="button">Login</Link>
+                            <Link className={`btn ${props.mode == 'dark' ? ' btn-outline-light' : 'btn-outline-primary'} mx-2`} to="/signup" role="button">Sign up</Link>
+                        </form> : <button onClick={handleLogout} className={`btn ${props.mode == 'dark' ? ' btn-outline-light' : 'btn-outline-primary'} mb-3`}>Logout</button>}
 
-                    <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
-                        <input className="form-check-input d-none"
-                            onChange={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-                        <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.mode === 'light' ? (<><i className="fa-sharp fa-solid fa-lightbulb"></i> Dark</>) : (<><i className="fa-sharp fa-solid fa-lightbulb"></i> Light</>)}  Mode</label>
+                        <div className={` text-${props.mode === 'light' ? 'dark' : 'light'} mx-lg-2 mx-0`}>
+                            <input className="form-check-input d-none"
+                                onChange={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.mode === 'light' ? (<><i className="fa-sharp fa-solid fa-lightbulb"></i> Dark</>) : (<><i className="fa-sharp fa-solid fa-lightbulb"></i> Light</>)}  Mode</label>
+                        </div>
                     </div>
                 </div>
             </nav>

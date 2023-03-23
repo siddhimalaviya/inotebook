@@ -40,12 +40,10 @@ const Login = (props) => {
         <>
         <div className='container '>
             <div className=' row '>
-             <div className=" text-white col-6 my-5" >
-               <div>
-                   <img src="https://img.freepik.com/premium-vector/online-registration-sign-up-concept-flat-vector-illustration-young-male-cartoon-character-sitting-huge-smartphone-login-account-social-media-app-user-interface-secure-login_241107-1247.jpg?w=2000" alt=""  style={{ width: "35rem" }}/>
-               </div>
+             <div className="col-lg-6 col-md-6 col-sm-12 my-5 align-self-center" >
+                   <img src="https://img.freepik.com/premium-vector/online-registration-sign-up-concept-flat-vector-illustration-young-male-cartoon-character-sitting-huge-smartphone-login-account-social-media-app-user-interface-secure-login_241107-1247.jpg?w=2000" alt=""  className='w-100 rounded mx-auto d-block h-100'/>
              </div>
-             <div className=" mx-2 text-black col-6 my-5" style={{ width: "25rem" }}>
+             <div className=" col-lg-6 col-md-6 col-sm-12 my-5">
                <div className="card-body" style={{color: props.mode === 'dark'? 'white': 'black'}}>
                     <h2 className='text-center'> Login to continue to iNotebook</h2>
                     <form onSubmit={handleLogin}>
